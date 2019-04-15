@@ -167,6 +167,8 @@ public:
 private:
   void getControllerNames(std::vector<std::string> &v);
 
+  void manageSwitch(const ros::Time &time);
+
   hardware_interface::RobotHW* robot_hw_;
 
   ros::NodeHandle root_nh_, cm_node_;
