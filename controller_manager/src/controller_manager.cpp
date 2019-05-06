@@ -128,7 +128,7 @@ void ControllerManager::getControllerNames(std::vector<std::string> &names)
   }
 }
 
-void ControllerManager::manageSwitch(const ros::Time &time)
+void ControllerManager::manageSwitch(const ros::Time& time)
 {
   // switch hardware interfaces (if any)
   if (!switch_started_)
@@ -151,7 +151,7 @@ void ControllerManager::manageSwitch(const ros::Time &time)
   }
 }
 
-void ControllerManager::stopControllers(const ros::Time &time)
+void ControllerManager::stopControllers(const ros::Time& time)
 {
   // stop controllers
   for (auto &request : stop_request_)
@@ -166,7 +166,7 @@ void ControllerManager::stopControllers(const ros::Time &time)
   }
 }
 
-void ControllerManager::startControllers(const ros::Time &time)
+void ControllerManager::startControllers(const ros::Time& time)
 {
   // start controllers
   if (robot_hw_->switchResult() == hardware_interface::RobotHW::DONE)
@@ -210,7 +210,7 @@ void ControllerManager::startControllers(const ros::Time &time)
   }
 }
 
-void ControllerManager::startControllersAsap(const ros::Time &time)
+void ControllerManager::startControllersAsap(const ros::Time& time)
 {
   // start controllers if possible
   for (auto &request : start_request_)
